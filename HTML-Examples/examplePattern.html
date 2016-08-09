@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>setInterval/setTimeout</title>
+
+	
+  </head>
+  <body>
+	<canvas id='mycanvas' width='640' height='240' >
+	</canvas>
+   <script>
+    canvas               = document.getElementById('mycanvas');
+      context              = canvas.getContext('2d');
+      canvas.style.background = 'lightblue';
+    context.font         = 'bold 140px Times';
+      context.textBaseline = 'top';
+   
+	image = new Image();
+	image.src = 'arrows.png';
+	
+	image.onload = function () {
+		pattern = context.createPattern(image, 'repeat');
+		context.fillStyle = pattern;
+		context.fillText('this is text',0,0);
+		//context.strokeText('this is text to be filled',0,0);
+		//context.fillRect(20,20,600,200);
+	}
+   </script>
+  </body>
+</html>

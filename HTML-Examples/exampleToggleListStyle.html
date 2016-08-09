@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+<meta charset="UTF-8">
+
+<style>
+			
+.red {
+	display: none;
+	}
+.blue {
+	display: block;
+	border: 1px solid red;
+	}
+#left {
+	width: 200px;
+	border: 1px solid blue;
+	}
+li {
+	list-style: none;
+	}
+</style>
+<script>
+var toggle=true;
+
+function restyle(elmentId) {
+	if (toggle) {
+		document.getElementById(elmentId).classList.add("blue");
+		document.getElementById(elmentId).classList.remove("red");
+		toggle=false;
+		}
+	else {
+		document.getElementById(elmentId).classList.add("red");
+		document.getElementById(elmentId).classList.remove("blue");
+		toggle=true;
+	}
+	
+	
+}
+</script>
+
+<title>toggle function style</title>
+</head>
+
+<body>
+<div id="head">
+		<img src="../images/logo.jpg" alt="logo" align="left"/>
+		<h1>TiniLite World</h1>
+		<p>
+		<ul>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="products.html">Products</a></li>
+			<li><a href="tech.html">Technology</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="art.html">Art</a></li>
+		</ul>
+		</div>
+<div id="left">
+			<h2 onClick='restyle("about")'>About Us >></h2>
+				<ul id="about" class="red">
+					<li>People</li>
+					<li>Company</li>
+					<li>Community</li>
+				</ul>
+			<h2 onClick='restyle("products")'>Products >></h2>
+				<ul id="products" class="red">
+					<li>TiniCardLite</li>
+					<li>TiniAirLite</li>
+					<li>TiniBuckyLite</li>
+					<li>TiniOrbLite</li>
+					
+				</ul>
+			<h2 onClick='restyle("technology")'>Technology >></h2>
+				<ul id="technology" class="red">
+					<li>LED</li>
+					<li>Microcontroller</li>
+					<li>SBC-RPI single board</li>
+				</ul>
+			<h2 onClick='restyle("art")'>Art >></h2>
+				<ul id="art" class="red">
+					<li>TiniLite TeeShirt</li>
+					<li>TiniTubeLite</li>
+					<li>BuckyBall</li>
+					<li>TiniDNALite</li>
+					<li>TiniMusicLite</li>
+				</ul>
+			
+</div>
+
+</body>
+</html>

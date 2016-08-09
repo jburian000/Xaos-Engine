@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+<meta charset="UTF-8">
+<!-- my first.html -->
+<style>
+
+.red {
+	display: none;
+	}
+.blue {
+	display: block;
+	border: 1px solid red;
+	}
+div {
+	width: 200px;
+	}
+</style>
+<script>
+var toggle=true;
+
+function restyle(elmentId) {
+	/*
+	if (toggle) {
+	//document.getElementById("reset").setAttribute('style', 'background: #f00; color: #fff;');
+	//document.getElementById("reset").style.color = 'red';
+	//document.getElementById("reset").style.display = 'block';
+	
+	toggle=false;
+	}
+	else {
+	//document.getElementById("reset").setAttribute('style', 'background: #fff; color: #f00;');
+	//document.getElementById("reset").style.backgroundColor = 'green';
+	//document.getElementById("reset").style.display = 'none';
+
+	toggle=true;
+	}
+	*/
+	
+	if (toggle) {
+		document.getElementById(elmentId).classList.add("blue");
+		document.getElementById(elmentId).classList.remove("red");
+		toggle=false;
+		}
+	else {
+		document.getElementById(elmentId).classList.add("red");
+		document.getElementById(elmentId).classList.remove("blue");
+		toggle=true;
+	}
+	
+	
+}
+</script>
+
+<title>toggle function style</title>
+</head>
+
+<body>
+
+<div id="left">
+			<h2 onClick='restyle("about")'>About Us</h2>
+				<ul id="about" class="red">
+					<li>People</li>
+					<li>Company</li>
+					<li>Community</li>
+				</ul>
+			<h2 onClick='restyle("products")'>Products</h2>
+				<ul id="products" class="red">
+					<li>TiniCardLite</li>
+					<li>TiniAirLite</li>
+					<li>TiniBuckyLite</li>
+					<li>TiniOrbLite</li>
+					
+				</ul>
+			<h2 onClick='restyle("technology")'>Technology</h2>
+				<ul id="technology" class="red">
+					<li>LED</li>
+					<li>Microcontroller</li>
+					<li>SBC-RPI single board</li>
+				</ul>
+			<h2 onClick='restyle("art")'>Art</h2>
+				<ul id="art" class="red">
+					<li>TiniLite TeeShirt</li>
+					<li>TiniTubeLite</li>
+					<li>BuckyBall</li>
+					<li>TiniDNALite</li>
+					<li>TiniMusicLite</li>
+				</ul>
+			
+</div>
+
+</body>
+</html>

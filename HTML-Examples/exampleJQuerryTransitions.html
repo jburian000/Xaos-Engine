@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+	<!-- jQuerry no AJAX loaded from Google, slight delay -->
+	<meta charset="UTF-8">
+	<title>form input</title>
+	<style type="text/css">
+		#content {
+			position: absolute;
+			left:100px;
+			top: 100px;
+		}
+	</style>
+	
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load("jquery", "1");
+	</script>
+	<script type="text/javascript">
+	
+	
+		$(init);
+		function init () {
+			$("#show").click(showContent);
+			$("#hide").click(hideContent);
+			$("#toggle").click(toggleContent);
+			$("#slideDown").click(slideDown);
+			$("#slideUp").click(slideUp);
+			$("#fadeIn").click(fadeIn);
+			$("#fadeOut").click(fadeOut);
+		}
+		function showContent () {
+			$("#content").show();
+		}
+		function hideContent () {
+			$("#content").hide();
+		}
+		
+		function toggleContent () {
+			$("#content").toggle();
+		}
+		function slideDown () {
+			$("#content").slideDown("medium");
+		}
+		function slideUp () {
+			$("#content").slideUp(500);
+		}
+		function fadeIn () {
+			$("#content").fadeIn("slow", present);
+		}
+		function fadeOut () {
+			$("#content").fadeOut("fast");
+		}
+		function present () {
+			alert("I'm here");
+		}
+	</script>
+	
+</head>
+
+<body >
+	<button type="button" id="show">Show</button>
+	<button type="button" id="hide">Hide</button>
+	<button type="button" id="toggle">Toggle</button>
+	<button type="button" id="slideDown">Slide Down</button>
+	<button type="button" id="slideUp">Slide Up</button>
+	<button type="button" id="fadeIn">Fade In</button>
+	<button type="button" id="fadeOut">Fade Out</button>
+	<p id="content">I AM HERE</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+	<!-- jQuerry with AJAX loaded from Google, slight delay -->
+	<meta charset="UTF-8">
+	<title>form input</title>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load("jquery", "1");
+	</script>
+	<script>
+		$(document).ready(getAJAX);
+		function getAJAX() {
+			$("#output").load("hello.txt");
+		}
+	</script>
+	
+</head>
+
+<body>
+	<h1>Basic Load TxtFile Demo</h1>
+	<div id="output">Change?</div>
+</body>
+</html>

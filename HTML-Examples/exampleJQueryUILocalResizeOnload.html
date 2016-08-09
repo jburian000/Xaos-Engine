@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+	<!-- jQuerry no AJAX loaded from Google, slight delay -->
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css" />
+	<title>form input</title>
+	<style>
+		
+		#resize {
+			width: 300px;
+			height: 300px;
+			border: 1px solid red;
+		}
+	</style>
+	
+	<script	type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script>
+		
+		function resize () {
+			$("#resize").resizable();
+		}
+	</script>
+	
+</head>
+
+<body onload = "resize()">
+	<h1>ResizeMe Demo</h1>
+	
+	<div id="resize" class="ui-widget ui-widget-content ui-corner-all"><h2 class="ui-widget-header" >ResizeMe</h2><p>drag edges to resize<span class="ui-icon ui-icon-heart"></span></p></div>
+	
+	
+	
+</body>
+</html>

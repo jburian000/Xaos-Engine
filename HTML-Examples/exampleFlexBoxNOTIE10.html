@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+<meta charset="UTF-8">
+<!-- FlexBoxUntested: Will Run In FireFox IE11 (i have IE10)-->
+
+<title>FlexBoxUntested</title>
+<style>
+	div {
+		border: 1px solid black;
+		}
+	#a {
+		width: 300px;
+		height: 200px;
+		
+		display: flex;
+		flex-direction: column;
+		
+		display: -ms-flex;
+		-ms-flex-direction: column;
+		
+		
+		}
+	#b {
+		
+		flex: 1;
+		
+		-ms-flex: 1;
+		}
+	#c {
+		
+		flex: 1;
+		
+		-ms-flex: 1;
+		}
+	#d {
+		display: flex;
+		flex-direction: row;
+		flex: 2;
+		
+		display: -ms-flex;
+		-ms-flex-direction: row;
+		-ms-flex: 2;
+		}
+	#e {
+		flex: 1;
+		-ms-flex: 1;
+		
+		}
+	#f {
+		flex: 1;
+		-ms-flex: 1;
+		}
+</style>
+</head>
+
+<body>
+<div id="a">
+	<div id="b">b</div>
+	<div id="c">c</div>
+	<div id="d">
+		<div id="e">e</div>
+		<div id="f">f</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OnMouseOver</title>
+  </head>
+  <body>
+    <img id='object' src='apple.png'>
+
+    <script>
+	
+      document.getElementById('object').onmouseover = function() { this.src = 'orange.png'; this.border="10px solid black" };
+      document.getElementById('object').onmouseout  = function() { this.src = 'apple.png';
+		this.border="1px solid blue" };
+    </script> 
+  </body>
+</html>
+
+

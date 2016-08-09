@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+
+<head>
+<meta charset="UTF-8">
+<!-- my first.html -->
+<title>Borders</title>
+<style type="text/css">
+	#linear {
+		width: 200px;
+		height: 200px;
+		background: -ms-linear-gradient(bottom left,#fff,#000); 
+		//top, bottom, left, right and double word combinations
+	}
+	#radial {
+		width: 200px;
+		height: 200px;
+		//background: -ms-radial-gradient(top left,#fff,#000);
+		//background: -ms-radial-gradient(center,#fff,#000);
+		background: -ms-radial-gradient(50px 50px,#fff,#000);
+	}
+</style>
+</head>
+
+<body>
+	<div id="linear">this text <br> has linear gradient</div>
+	<div id="radial">this text <br> has radial gradient</div>
+</body>
+</html>

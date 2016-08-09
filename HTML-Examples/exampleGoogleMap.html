@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html> <!-- geolocation.html -->
+  <head>
+    <title>Geolocation Example</title>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+	 <script>
+     navigator.geolocation.getCurrentPosition(granted);
+	 
+	 function granted(position) {
+		document.getElementById('status').innerHTML = 'Permission Granted';
+        document.getElementById('map').style.border       = '1px solid black';
+        document.getElementById('map').style.width        = '640px';
+        document.getElementById('map').style.height       = '320px';
+		
+		var lat = position.coords.latitude;
+		var lon = position.coords.longitude;
+		var gmap = document.getElementById('map');
+		var gopts = {
+			center: new google.maps.LatLng(lat,lon),
+			zoom: 9, 
+			mapTypeId: google.maps.MapTypeId.SATELLITE   //ROADMAP
+		};
+		var map = new google.maps.Map(gmap,gopts);
+	 }
+       
+    </script>
+  </head>
+  <body>
+    <div id='status'></div>
+    <div id='map'></div>
+
+   
+  </body>
+</html>

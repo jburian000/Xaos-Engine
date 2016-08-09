@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>setInterval/setTimeout</title>
+
+	
+  </head>
+  <body>
+	<canvas id='mycanvas' width='640' height='240' >
+	</canvas>
+   <script>
+    canvas               = document.getElementById('mycanvas');
+      context              = canvas.getContext('2d');
+      canvas.style.background = 'lightblue';
+   
+	context.fillStyle = 'blue';
+	context.strokeStyle = 'green';
+	context.beginPath();
+		context.moveTo(20,20);
+		context.arcTo(240,240,460,20,160);
+		context.lineTo(460,20);
+		context.stroke();
+	context.closePath();
+	
+   </script>
+   </script>
+  </body>
+</html>

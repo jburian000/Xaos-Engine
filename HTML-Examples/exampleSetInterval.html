@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>setInterval/setTimeout Animation</title>
+	<style>
+		#box {
+			position: absolute;
+			background: #cacaca;
+			border: 1px solid red;
+			}
+	</style>
+	
+  </head>
+  <body>
+	<div id="box"></div>
+	<script>
+		var SIZE=10;
+		var LEFT=3;
+		
+		handle=setInterval(animate, 100);
+		setTimeout("clearInterval(handle)",5000);
+		function animate () {
+			SIZE+=10;
+			LEFT+=3;
+			if(SIZE == 200) {SIZE=0;}
+			if(LEFT == 300) {
+				//LEFT=0; 
+				//clearInterval(handle);
+			}
+			document.getElementById("box").style.width=SIZE + 'px';
+			document.getElementById("box").style.height=SIZE + 'px';
+			document.getElementById("box").style.left=LEFT + 'px';
+			
+		}
+		
+    </script> 
+  </body>
+</html>

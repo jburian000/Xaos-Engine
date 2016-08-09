@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html> <!-- geolocation.html -->
+  <head>
+    <title>Geolocation Example</title>
+    <!--<script src='OSC.js'></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  </head>
+  <body>
+    <div id='status'></div>
+    <div id='map'></div>
+
+    <script>
+     // if (typeof navigator.geolocation == 'undefined')
+     //    alert("Geolocation not supported.")
+     // else
+        navigator.geolocation.getCurrentPosition(granted, denied)
+
+      function granted(position)
+      {
+        // Uncomment below to popup the location
+        //     alert("You are at location:\n"
+        //       + position.coords.latitude + ", "
+        //       + position.coords.longitude)
+	  
+        document.getElementById('status').innerHTML = 'Permission Granted'
+        document.getElementById('map').style.border       = '1px solid black'
+        document.getElementById('map').style.width        = '640px'
+        document.getElementById('map').style.height       = '320px'
+
+        var lat   = position.coords.latitude
+        var lon  = position.coords.longitude
+        var gmap  = document.getElementById('map')
+        var gopts =
+        {
+          center: new google.maps.LatLng(lat, lon),
+          zoom: 9, mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(gmap, gopts)
+      }
+
+      function denied(error)
+      {
+        var message
+
+        switch(error.code)
+        {
+          case 1: message = 'Permission Denied'; break;
+          case 2: message = 'Position Unavailable'; break;
+          case 3: message = 'Operation Timed Out'; break;
+          case 4: message = 'Unknown Error'; break;
+        }
+
+        // Uncomment below to popup the message
+        //   alert("Error with Geolocation: " + message)
+
+        document.getElementById('status').innerHTML = message
+      }
+    </script>
+  </body>
+</html>

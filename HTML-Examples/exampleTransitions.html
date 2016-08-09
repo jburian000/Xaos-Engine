@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+
+<head>
+<meta charset="UTF-8">
+<!-- my first.html -->
+<title>Transition</title>
+<style type="text/css">
+	img {
+		width: 250px;
+		height: 200px;
+		padding: 10px;
+		text-align: center;
+		border: 1px solid black;
+		background: yellow;
+		
+		transition: all .8s ease-in-out;
+		//-ms-transition: all .8x ease-in-out;
+		}
+	img:hover {
+		width: 300px;
+		height: 250px;
+		background: orange;
+		transform: rotate(180deg);
+		border: 10px solid black;
+		//-ms-transform: rotate(180deg);
+	}
+	
+</style>
+</head>
+
+<body>
+	
+	<div id="box">
+		<img src="preview-50-3388.jpg" alt="" />
+	</div>
+</body>
+</html>

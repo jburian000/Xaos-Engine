@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+	<!-- jQuerry no AJAX loaded from Google, slight delay -->
+	<meta charset="UTF-8">
+	<title>form input</title>
+	<style type="text/css">
+		#content {
+			position: absolute;
+			left:100px;
+			top: 100px;
+		}
+	</style>
+	
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load("jquery", "1");
+	</script>
+	<script type="text/javascript">
+	
+	
+		$(init);
+		function init () {
+			$("#reset").click(reset);
+			$("#anim").click(anim);
+			$("#right").click(right);
+			$("#move").click(move);
+		}
+		function reset () {
+			$("#content").css({"left": "100px", "top": "100px"});
+		}
+		function right () {
+			$("#content").animate({"left": "+=10px"},100);
+		}
+		
+		function move () {
+			$("#content").css("top", "200px").css("left","200px");
+		}
+		function anim () {
+			$("#content").animate({"left": "400px", "top": "200px"}, 2000);
+		}
+	</script>
+	
+</head>
+
+<body >
+	<button type="button" id="reset">reset</button>
+	<button type="button" id="anim">animate</button>
+	<button type="button" id="right">right</button>
+	<button type="button" id="move">move</button>
+	<p id="content">I AM HERE</p>
+</body>
+</html>

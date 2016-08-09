@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+<meta charset="UTF-8">
+<!-- my first.html -->
+
+<title>Shows getElementById Without Button</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	function colorPrompt() {
+		var name = prompt("What is your color?");
+		var out=document.getElementById("out");
+			out.innerHTML = name;
+		} //switch
+</script>
+</head>
+
+<body>
+	<h1>Change Document</h1>
+	<form>
+	<fieldset>
+	
+	<input type="button" value="ClickMeToRunPrompt" onClick="colorPrompt()" />
+	
+	</fieldset>
+	</form>
+	<p id="out"></p>
+</body>
+</html>

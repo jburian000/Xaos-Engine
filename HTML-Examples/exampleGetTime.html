@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>setInterval/setTimeout</title>
+	<style></style>
+	<script>
+		
+		handle=setInterval("showtime(document.getElementById('time'))",1000);
+		setTimeout("clearInterval(handle)",5000);
+		function showtime(object) {	
+			var date= new Date();
+			object.innerHTML = date.toTimeString().substr(0,8);
+			//object.innerHTML = date.toTimeString();
+		}
+	</script>
+  </head>
+  <body>
+   The time is: <span id="time">00:00:00</span>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+<meta charset="UTF-8">
+<!-- my first.html -->
+
+<title>CSS Accordian</title>
+
+<style>
+	#accordion div {
+		position: relative;
+		width: 400px;
+		border: 1px solid black;
+		overflow: hidden;
+	}
+	#accordion:hover div:hover {
+		height: 150px;
+		overflow: auto;
+	}
+	
+	ul li {
+		display: none;
+	}
+	
+	#top:hover > ul li {
+		display: block;
+		overflow: auto;
+		}
+</style>
+</head>
+
+<body>
+	<div id="accordion">
+		<div>
+			<h2>Top</h2>
+			<div id="top">
+			<p>This is the Top Division</p>
+			<ul>
+				<li>item1</li>
+				<li>item2</li>
+			</ul>
+			</div>
+		</div>
+		<div>
+			<h2 id="midtop">MiddleTop</h2>
+			<p>This is the Middle Top Division</p>
+		</div>
+		<div>
+			<h2 id="midbottom">MiddleBottom</h2>
+			<p>This is the Middle Bottom Division</p>
+		</div>
+		<div>
+			<h2 id="bottom">Bottom</h2>
+			<p>This is the Bottom Division</p>
+		</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>setInterval/setTimeout</title>
+
+	
+  </head>
+  <body>
+	<canvas id='mycanvas' width='640' height='240' >
+	</canvas>
+   <script>
+    canvas               = document.getElementById('mycanvas');
+      context              = canvas.getContext('2d');
+      canvas.style.background = 'lightblue';
+   
+	//context.fillStyle = 'blue';
+	context.strokeStyle = 'green';
+	context.beginPath();
+		context.moveTo(180,60);
+		//context.arcTo(240,240,460,20,160);
+		//context.lineTo(460,20);
+		//context.stroke();
+		context.quadraticCurveTo(240,0,300,60);
+		context.quadraticCurveTo(460,30,420,100);
+		context.quadraticCurveTo(480,210,340,170);
+		context.quadraticCurveTo(240,240,200,170);
+		context.quadraticCurveTo(100,200,140,130);
+		context.quadraticCurveTo(40,40,180,60);
+		context.fillStyle = 'white';
+		context.fill();
+	context.closePath();
+	
+   </script>
+   </script>
+  </body>
+</html>

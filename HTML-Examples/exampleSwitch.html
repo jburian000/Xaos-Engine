@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang=en-US">
+<head>
+<meta charset="UTF-8">
+<!-- my first.html -->
+
+<title>Shows getElementById Without Button</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	function colorPrompt() {
+		var name = prompt("What is your color? red or blue?");
+		var out=document.getElementById("out");
+		
+			switch (name) {
+				case "red":
+					out.innerHTML = "red it is";
+					break;
+				case "blue":
+					out.innerHTML = "blue it is";
+					break;
+				default:
+					out.innerHTML = "other is isn't";
+				}
+		}
+</script>
+</head>
+
+<body>
+	<h1>Change Document</h1>
+	<form>
+	<fieldset>
+	
+	<input type="button" value="ClickMeToRunPrompt" onClick="colorPrompt()" />
+	
+	</fieldset>
+	</form>
+	<p id="out"></p>
+</body>
+</html>
